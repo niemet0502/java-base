@@ -33,4 +33,26 @@ public class Fraction {
   public long denominator(){
     return this.denominator;
   }
+
+  // metiers
+  public Fraction add(Fraction f){
+    return f;
+  }
+
+  public Fraction subtract(Fraction f){
+    return f;
+  }
+  public Fraction multiply(Fraction f){
+    return f;
+  }
+  public Fraction divide(Fraction f){
+    return f;
+  }
+  public Fraction simplify(Fraction f){
+    return f;
+  }
+
+  
+
+
 }
