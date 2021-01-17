@@ -2,57 +2,77 @@ public class Fraction {
   private long numerator;
   private long denominator;
 
+  //contructeur
+
   public Fraction(){
-    this.denominator = 1;
-    this.numerator = 0;
+      this.numerator = 0;
+      this.denominator = 1;
   }
 
-  public Fraction(long numerator, long denominator){
-    this.denominator = denominator;
-    this.numerator = numerator;
+  public Fraction(long numerator,long denominator){
+      this.numerator = numerator;
+      this.denominator = denominator;
   }
 
-  public Fraction(long denominator){
-    this.denominator = denominator;
-    this.numerator = 1;
+  public Fraction(long numerator){
+      this.numerator = numerator;
+      this.denominator = 1;
   }
-  // setters
+  //public Fraction(string)
+
+      //methodes 
+  //setters
   public void setNumerator(long numerator){
-    this.numerator = numerator;
+      this.numerator = numerator;
   }
 
   public void setDenominator(long denominator){
-    this.denominator = denominator;
+      this.denominator = denominator;
   }
-  
   //getters
   public long numerator(){
-    return this.numerator;
+      return this.numerator;
   }
 
   public long denominator(){
-    return this.denominator;
+      return this.denominator;
   }
 
-  // metiers
   public Fraction add(Fraction f){
-    return f;
+      Fraction resultat = new Fraction();
+      resultat.setNumerator((this.numerator()*f.denominator())+(this.denominator()*f.numerator()));
+      resultat.setDenominator(this.denominator()*f.denominator());
+      return resultat;
+
   }
 
-  public Fraction subtract(Fraction f){
-    return f;
+  public Fraction substract(Fraction f){
+      Fraction resultat = new Fraction();
+      resultat.setNumerator((this.numerator()*f.denominator())-(this.denominator()*f.numerator()));
+      resultat.setDenominator(this.denominator()*f.denominator());
+      return resultat;
   }
+
   public Fraction multiply(Fraction f){
-    return f;
-  }
-  public Fraction divide(Fraction f){
-    return f;
-  }
-  public Fraction simplify(Fraction f){
-    return f;
+      Fraction resultat = new Fraction();
+      resultat.setNumerator(this.numerator()*f.numerator());
+      resultat.setDenominator(this.denominator()*f.denominator());
+      return resultat;
   }
 
+  public Fraction  divide(Fraction f){
+      Fraction resultat = new Fraction();
+      resultat.setNumerator(this.numerator()*this.denominator());
+      resultat.setDenominator(this.denominator()*f.numerator());
+      return resultat;
+  }
+
+ // public Boolean equals(Fraction f)
+ //private Fraction simplify()
   
+  public String toString(){
 
+      return this.numerator+" / "+this.denominator;
+  }
 
-}
+} 
